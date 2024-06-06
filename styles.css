@@ -1,0 +1,123 @@
+:root {
+    --color-azul-marinho: #006994;
+    --color-amarelo: #ffdd57;
+    --color-cinza-claro: #f4f4f4;
+    --text-color-cinza-escuro: #333333;
+    --color-azul-claro: #e0f7fa;
+    --color-verde-claro: #f1f8e9;
+    --color-branco: #ffffff;
+    --font-body: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-cinza-claro);
+    color: var(--text-color-cinza-escuro);
+}
+
+header {
+    width: 100%;
+    background-color: var(--color-azul-marinho);
+    color: var(--color-branco);
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    color: var(--color-branco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-amarelo);
+}
+
+section {
+    font-size: 1.2em;
+    width: 80%;
+    margin: 5em 0 2em;
+    padding: 2em;
+    text-align: center;
+    background-color: var(--color-branco);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 1em;
+    border-radius: 8px;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--color-azul-claro);
+}
+
+section:nth-of-type(even) {
+    background-color: var(--color-verde-claro);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--color-azul-marinho);
+    color: var(--color-branco);
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+    }
+    header {
+        padding: 0.5em 0;
+    }
+    footer {
+        padding: 0.5em 0;
+    }
+}
+
