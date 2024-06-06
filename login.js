@@ -1,13 +1,9 @@
 function validateLogin() {
+    // Obtém os valores do nome de usuário e senha
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('error-message');
-
-    if (username === 'usuario' && password === '123') {
-        alert('Login bem-sucedido!');
-        window.location.href = "index.html";
-    } else {
-        errorMessage.textContent = 'Usuário ou senha incorretos!';
-        alert('usuario ou senha incorretos!!')
-    }
+    
+    // Sempre exibe a mensagem de sucesso e redireciona para "index.html"
+    alert('Login bem-sucedido!');
+    window.location.href = "index.html";
 }
